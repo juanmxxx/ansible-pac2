@@ -13,7 +13,7 @@
     - name: Crear usuario1
       user:
         name: usuario1
-        password: "{{ usuario1_password | password_hash('sha512') }}"
+        password: "{{ usuario1_password }}"
         group: developers
         create_home: yes
         shell: /bin/bash
@@ -21,7 +21,7 @@
     - name: Crear usuario2
       user:
         name: usuario2
-        password: "{{ usuario2_password | password_hash('sha512') }}"
+        password: "{{ usuario2_password }}"
         group: developers
         create_home: yes
         shell: /bin/bash
