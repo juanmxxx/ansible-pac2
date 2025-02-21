@@ -10,6 +10,6 @@
       shell:
         touch /tmp/awx_test.txt
 
-      - name: "Ver variable"
-        debug:
-          var: data
+    - name: "Ver variable"
+      debug:
+        var: data
