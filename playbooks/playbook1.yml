@@ -2,8 +2,14 @@
 - name: "Proceso fichero"
   hosts: webservers
 
+  vars:
+    - data: 'Hola'
+
   tasks:
     - name: "Crear fichero"
       shell:
         touch /tmp/awx_test.txt
-        
+
+      - name: "Ver variable"
+        debug:
+          var: data
